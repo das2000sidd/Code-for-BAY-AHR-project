@@ -11,10 +11,9 @@ res=read.table(file="GRCm39_gene_and_transcript_stable_ID_version.txt",header = 
 res=res[,c(1,4)]
 colnames(res)=c("GENEID","TXNAME")
 res=res[,c(2,1)]
-
-
-
 res_tibble=as_tibble(res)
+
+
 files=list.files(path="/Users/siddhaduio.no/Desktop/PhD_Project_related/COMPARING_WT_LT_BAY_AHRKO_DMSO_SAMP",full.names = T)
 
 files_wt=files[grep("PW",files)] ## WT
