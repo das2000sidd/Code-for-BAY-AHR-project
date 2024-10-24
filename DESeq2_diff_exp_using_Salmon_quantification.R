@@ -163,7 +163,7 @@ write.table(res_wt_vs_ltbay_df,file="Comparison_WT_vs_LTBAY_both_DMSO.txt",col.n
 
 
 library(edgeR)
-cpm.nor.count=cpm(dds,normalized.lib.sizes = TRUE,log=FALSE)
+cpm.nor.count=cpm(dds,normalized.lib.sizes = TRUE,log=TRUE)
 
 write.table(cpm.nor.count,file="Normalised_CPM_count.txt",col.names = T,row.names = T,sep="\t",quote = F)
 write.table(rownames(dds),file="Background_genes.txt",col.names = F,row.names = F,sep="\t",quote = F)
