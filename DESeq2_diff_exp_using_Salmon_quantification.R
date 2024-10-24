@@ -17,7 +17,11 @@ res=res[,c(2,1)]
 res_tibble=as_tibble(res)
 files=list.files(path="/Users/siddhaduio.no/Desktop/PhD_Project_related/COMPARING_WT_LT_BAY_AHRKO_DMSO_SAMP",full.names = T)
 
-files=files[c(52:55,79:82,87,89,91,93)] ## chnage this to grep statment
+files_wt=files[grep("PW",files)] ## WT
+files_ahrko=files[grep("PK",files)] ## AHRKO
+files_ltbay=files[grep("LB",files)] ## LT-BAY
+
+all_files=c(files_ltbay,files_ahrko,files_wt)
 
 files=as.data.frame(files)
 
