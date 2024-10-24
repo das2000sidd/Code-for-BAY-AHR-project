@@ -28,7 +28,7 @@ ahrko_and_ltbay_dn=intersect(ahrko_sig_dn$Ensembl,ltbay_sig_dn$Ensembl)
 
 
   
-cpm=read.table(file="Normalised_CPM_count.txt",header = T,sep="\t",stringsAsFactors = F)
+cpm=read.table(file="LogNormalised_CPM_count.txt",header = T,sep="\t",stringsAsFactors = F)
 
 wt_samp=paste("PW1_",1:4,sep="")
 ko_samp=paste("PK",1:4,sep="")
