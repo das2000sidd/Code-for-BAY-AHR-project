@@ -1,5 +1,3 @@
-setwd("~/Desktop/PhD_Project_related/COMPARING_WT_LT_BAY_AHRKO_DMSO_SAMP")
-
 
 library(tximportData)
 library(TxDb.Mmusculus.UCSC.mm39.refGene)
