@@ -134,24 +134,6 @@ plotMDS(dds)
 glimmaMDS(dds)
 
 
-contrast_bay_dmso <- c("group", "WTBay", "WTDMSO")
-
-#res_Bay_DMSO <- results(dds, contrast=contrast_bay_dmso,pAdjustMethod = "BH",format = "DataFrame")
-#mcols(res_Bay, use.names = TRUE)
-#res_Bay_DMSO_df=as.data.frame(res_Bay_DMSO)
-#res_Bay_DMSO_df$Ensembl=rownames(res_Bay_DMSO_df)
-#summary(res_Bay_DMSO)
-#res_Bay_DMSO_df=res_Bay_DMSO_df[complete.cases(res_Bay_DMSO_df),]
-
-
-contrast_kyn_dmso <- c("group", "WTKyn", "WTDMSO")
-
-#res_Kyn_DMSO <- results(dds, contrast=contrast_kyn_dmso,pAdjustMethod = "BH",format = "DataFrame")
-#res_Kyn_DMSO_df=as.data.frame(res_Kyn_DMSO)
-#res_Kyn_DMSO_df$Ensembl=rownames(res_Kyn_DMSO_df)
-#summary(res_Bay_DMSO)
-#res_Kyn_DMSO_df=res_Kyn_DMSO_df[complete.cases(res_Kyn_DMSO_df),]
-
 
 contrast_wt_vs_ahrko <- c("group", "AHRKo DMSO", "WT DMSO")
 
@@ -174,7 +156,7 @@ View(res_wt_vs_ahrko_df)
 View(res_wt_vs_ltbay_df)
 
 
-#write.table(res_wt_vs_ahrko_df,file="Comparison_WT_vs_AHRKO_both_DMSO.txt",col.names = T,row.names = T,sep="\t",quote = F)
+write.table(res_wt_vs_ahrko_df,file="Comparison_WT_vs_AHRKO_both_DMSO.txt",col.names = T,row.names = T,sep="\t",quote = F)
 write.table(res_wt_vs_ltbay_df,file="Comparison_WT_vs_LTBAY_both_DMSO.txt",col.names = T,row.names = T,sep="\t",quote = F)
 
 
